@@ -1,0 +1,5 @@
+/Users/candinmarruh/Projects/TestXamarin01/TestXamarin01/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/candinmarruh/Projects/TestXamarin01/TestXamarin01/bin/Debug/TestXamarin01.exe.mdb
+/Users/candinmarruh/Projects/TestXamarin01/TestXamarin01/bin/Debug/TestXamarin01.exe
+/Users/candinmarruh/Projects/TestXamarin01/TestXamarin01/obj/x86/Debug/TestXamarin01.exe
+/Users/candinmarruh/Projects/TestXamarin01/TestXamarin01/obj/x86/Debug/TestXamarin01.exe.mdb
