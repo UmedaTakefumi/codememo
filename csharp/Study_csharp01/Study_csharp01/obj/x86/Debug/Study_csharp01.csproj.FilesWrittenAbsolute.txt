@@ -1,0 +1,5 @@
+/Users/candinmarruh/Projects/Study_csharp01/Study_csharp01/obj/x86/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/Users/candinmarruh/Projects/Study_csharp01/Study_csharp01/bin/Debug/Study_csharp01.exe.mdb
+/Users/candinmarruh/Projects/Study_csharp01/Study_csharp01/bin/Debug/Study_csharp01.exe
+/Users/candinmarruh/Projects/Study_csharp01/Study_csharp01/obj/x86/Debug/Study_csharp01.exe
+/Users/candinmarruh/Projects/Study_csharp01/Study_csharp01/obj/x86/Debug/Study_csharp01.exe.mdb
