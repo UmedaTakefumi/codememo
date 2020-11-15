@@ -35,7 +35,6 @@ int main(int argc, const char * argv[]) {
     NSLog(@"%@", RESTAPI_URL);
     NSLog(@"%d", fuga(1, 2, 3, 4, 5));
     
-    
     // ref:
     //      https://sodocumentation.net/ja/objective-c/topic/1461/列挙型
     typedef enum {
@@ -51,12 +50,39 @@ int main(int argc, const char * argv[]) {
     
     NUMBER_PART SUUJI_01 = NUM_A;
     NUMBER_PART SUUJI_02 = NUM_B;
-    
+    NUMBER_PART SUUJI_03 = NUM_C;
+
     NSLog(@"+-------------------------------------+");
     NSLog(@"%d", SUUJI_01);
     NSLog(@"+-------------------------------------+");
     NSLog(@"%d", SUUJI_02);
     NSLog(@"+-------------------------------------+");
+    NSLog(@"%d", SUUJI_03);
+    NSLog(@"+-------------------------------------+");
 
+    typedef enum  {
+        sunday = 1,
+        monday = 2,
+        tuesday = 3,
+        wednesday = 4,
+        thursday = 5,
+        friday = 6,
+        saturday = 7,
+        
+    } weekly;
+        
+    weekly youbi = sunday;
+    
+    NSLog(@"+-------------------------------------+");
+    NSLog(@"%d", youbi);
+    NSLog(@"+-------------------------------------+");
+
+    NSString *aiueo = @"あいうえお";
+    NSLog(@"+-------------------------------------+");
+    NSLog(@"%@", aiueo);
+    NSLog(@"+-------------------------------------+");
+
+    
+    
     return 0;
 }
