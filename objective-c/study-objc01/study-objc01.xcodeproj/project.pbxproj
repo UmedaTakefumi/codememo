@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0052956D2560C12700A42552 /* foobar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0052956C2560C12700A42552 /* foobar.m */; };
 		00F78F61255EDD6C00FDAD12 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00F78F60255EDD6C00FDAD12 /* main.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0052956C2560C12700A42552 /* foobar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = foobar.m; sourceTree = "<group>"; };
 		00F78F5D255EDD6C00FDAD12 /* study-objc01 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "study-objc01"; sourceTree = BUILT_PRODUCTS_DIR; };
 		00F78F60255EDD6C00FDAD12 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				00F78F60255EDD6C00FDAD12 /* main.m */,
+				0052956C2560C12700A42552 /* foobar.m */,
 			);
 			path = "study-objc01";
 			sourceTree = "<group>";
@@ -118,6 +121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0052956D2560C12700A42552 /* foobar.m in Sources */,
 				00F78F61255EDD6C00FDAD12 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

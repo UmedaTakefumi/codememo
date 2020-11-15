@@ -27,5 +27,9 @@ int main(int argc, const char * argv[]) {
         
     }
     
+//    NSLog(@"%d", FOOA);
+//    NSLog(@"%@", RESTAPI_URL);
+//    NSLog(@"%d", fuga(1, 2, 3));
+    
     return 0;
 }
