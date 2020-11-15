@@ -35,5 +35,15 @@ int main(int argc, const char * argv[]) {
     NSLog(@"%@", RESTAPI_URL);
     NSLog(@"%d", fuga(1, 2, 3, 4, 5));
     
+    enum {
+        NUM_A = 1,
+        NUM_B = 2,
+        NUM_C = 3,
+        NUM_D = 4,
+        NUM_E = 5,
+        NUM_F = 6,
+        NUM_G = 7
+    };
+    
     return 0;
 }
