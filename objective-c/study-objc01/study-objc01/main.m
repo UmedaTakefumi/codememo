@@ -54,11 +54,12 @@ int main(int argc, const char * argv[]) {
 
     NSLog(@"+-------------------------------------+");
     NSLog(@"%d", SUUJI_01);
+    
     NSLog(@"+-------------------------------------+");
     NSLog(@"%d", SUUJI_02);
+    
     NSLog(@"+-------------------------------------+");
     NSLog(@"%d", SUUJI_03);
-    NSLog(@"+-------------------------------------+");
 
     typedef enum  {
         sunday = 1,
@@ -75,14 +76,20 @@ int main(int argc, const char * argv[]) {
     
     NSLog(@"+-------------------------------------+");
     NSLog(@"%d", youbi);
-    NSLog(@"+-------------------------------------+");
-
-    NSString *aiueo = @"あいうえお";
+    NSString *aiueo = @"あいうえお"; // 5
     NSLog(@"+-------------------------------------+");
     NSLog(@"%@", aiueo);
+    
+    NSString *kana = [aiueo stringByAppendingString:@"かきくけこ"]; // 10
     NSLog(@"+-------------------------------------+");
+    NSLog(@"%@", kana);
 
-    
-    
+    NSString *alpha = @"abcedfghijk"; // 11
+    NSInteger length_alpha = [alpha length];
+    NSInteger length_aiueo = [aiueo length];
+    NSLog(@"+-------------------------------------+");
+    NSLog(@"%ld", length_alpha);
+    NSLog(@"%ld", length_aiueo);
+
     return 0;
 }
