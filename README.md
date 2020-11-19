@@ -1,0 +1,4 @@
+# codememo
+
+AAA
+aiueo
