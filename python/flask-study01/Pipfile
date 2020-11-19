@@ -5,6 +5,11 @@ name = "pypi"
 
 [packages]
 flask = "*"
+setuptools = "*"
+uwsgi = "*"
+sqlalchemy = "*"
+flask-sqlalchemy = "*"
+blueprint = "*"
 
 [dev-packages]
 
