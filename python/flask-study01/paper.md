@@ -133,3 +133,11 @@ cd python/
 cd flask-study01/
 pipenv install uwsgi
 pipenv install SQLAlchemy Flask-SQLAlchemy Blueprint
+sudo firewall-cmd --list-ports
+sudo firewall-cmd --add-port=2000/tcp
+sudo firewall-cmd --list-ports
+sudo firewall-cmd --runtime-to-permanent
+sudo firewall-cmd --list-ports
+sudo systemctl restart firewalld.service
+sudo firewall-cmd --list-ports
+sudo firewall-cmd --list-service
