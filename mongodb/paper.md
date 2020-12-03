@@ -1,4 +1,6 @@
 
+# mongodb 走り書き
+
 ```
 sudo vi /etc/yum.repos.d/mongodb-org-4.0.repo
 ```
