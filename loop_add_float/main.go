@@ -2,7 +2,10 @@
 
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 
@@ -11,6 +14,7 @@ func main() {
  // }
 
   k := 0.01
+  fmt.Println(reflect.TypeOf(k))
   for k < 1 {
     fmt.Printf("%v, + , 0.01 , = : ", k)
     k = k + 0.01
