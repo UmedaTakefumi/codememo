@@ -13,21 +13,35 @@ func main() {
  //   fmt.Printf("  %v\n", i)
  // }
 
-  k := 0.01
-  fmt.Println(reflect.TypeOf(k))
-  for k < 1 {
-    fmt.Printf("%v + 0.01 = : ", k)
-    k = k + 0.01
-    fmt.Printf("%v \n", k)
+  a := 0.01
+  fmt.Println(reflect.TypeOf(a))
+  for a < 1 {
+    fmt.Printf("%v + 0.01 =  ", a)
+    a = a + 0.01
+    fmt.Printf("%v \n", a)
 
   }
 
   fmt.Println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-")
 
-  v := 0.01
-  for v <= 1 {
-    fmt.Printf("%v \n", v)
-    v = v + 0.01
+  b := 0.01
+  for b <= 1 {
+    fmt.Printf("%v \n", b)
+    b = b + 0.01
+  }
+
+  fmt.Println("+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-")
+
+  /**
+  	1/0.01=100
+  **/
+  counter := 1
+  c := 0.01
+  for counter <=100 {
+    fmt.Printf("%v + 0.01 = ", c)
+    counter++
+    c = c + 0.01
+    fmt.Printf("%v \n", c)
   }
 
 }
