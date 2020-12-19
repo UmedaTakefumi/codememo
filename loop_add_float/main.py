@@ -10,3 +10,9 @@ while counter <= 100:
     #print(counter)
     counter+=1
 
+b = 0.01
+while b <= 1:
+    print(b)
+    b = b + 0.01
+
+
