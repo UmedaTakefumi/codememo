@@ -1,4 +1,4 @@
-# codememo
+# stock_scripts
 
-AAA
-aiueo
+ちょっとしたスクリプトをストックしておく場所
+
