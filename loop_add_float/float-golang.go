@@ -45,3 +45,5 @@ func main() {
   }
 
 }
+
+// ref.https://text.baldanders.info/golang/loop-counter/
