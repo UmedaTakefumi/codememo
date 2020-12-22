@@ -23,6 +23,12 @@ RUN apt-get -y install golang
 # ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
 RUN apt-get -y install ruby2.7
 
+# nodejs v10.19.0
+RUN apt-get -y install nodejs
+
+# csharp Mono JIT compiler version 6.8.0.105 (Debian 6.8.0.105+dfsg-2 Wed Feb 26 23:23:50 UTC 2020)
+RUN apt-get -y install mono-devel
+
 WORKDIR /root/source
 
 ## go
