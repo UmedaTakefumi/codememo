@@ -1,7 +1,8 @@
-# Dockerfile / 
+# Dockerfile / 2020.12.19_loop_add_float
+## usage:
+##   docker build -t ss-2020.12.19_loop_add_float .
+##   docker run -it ss-2020.12.19_loop_add_float /bin/bash
 
-## docker build -t ss-2020.12.19_loop_add_float .
-## docker run -it ss-2020.12.19_loop_add_float /bin/bash
 FROM ubuntu:20.04
 
 USER root
@@ -27,18 +28,17 @@ WORKDIR /root/source
 ## go
 COPY loop-int-go.go /root/source
 COPY loop-float-go.go /root/source
+RUN chmod 777 /root/source/*.go
 
 ## perl
 COPY loop-float-perl.pl /root/source
+RUN chmod 777 /root/source/*.pl
 
 ## python
 COPY loop-float-python.py /root/source
+RUN chmod 777 /root/source/*.py
 
 ## ruby
 COPY loop-float-ruby.rb /root/source
-
-RUN chmod 777 /root/source/*.py
-RUN chmod 777 /root/source/*.go
 RUN chmod 777 /root/source/*.rb
-RUN chmod 777 /root/source/*.pl
 
