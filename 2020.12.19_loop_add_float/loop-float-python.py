@@ -1,24 +1,24 @@
 #!/usr/bin/python3
 
-a = 0.01
-counter = 1
-print(type(a))
-print(type(counter))
+#import decimal
 
-while counter <= 100:
-    print(a)
-    a = a + 0.01
-    #print(counter)
-    counter+=1
+def loop_count_add(counter_start, counter_end, a, b):
+    """
+    """
+    list = []
+    while counter_start <= counter_end:
+        #print(a)
+        list.append(a)
+        a = a + b
+        counter_start+=1
 
-b = 0.01
-print(type(b))
+    return list
 
-while b <= 1:
-    print(b)
-    b = b + 0.01
+if __name__ == "__main__":
 
-import decimal
+  d = loop_count_add(1, 100, 1, 1)
+  print(d)
 
-
+  e = loop_count_add(1, 100, 0.01, 0.01)
+  print(e)
 
