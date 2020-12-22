@@ -14,37 +14,37 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get -y update
 RUN apt-get -y install vim git
 
-# Python 3.9.0 (default, Dec  6 2020, 18:02:34) 
-RUN apt-get -y install python3 
-
-# go version go1.13.8 linux/amd64
-RUN apt-get -y install golang
-
-# ruby 2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
-RUN apt-get -y install ruby2.7
-
-# nodejs v10.19.0
-RUN apt-get -y install nodejs
-
-# csharp Mono JIT compiler version 6.8.0.105 (Debian 6.8.0.105+dfsg-2 Wed Feb 26 23:23:50 UTC 2020)
-RUN apt-get -y install mono-devel
-
 WORKDIR /root/source
 
-## go
+## Python:
+##   3.9.0 (default, Dec  6 2020, 18:02:34) 
+RUN apt-get -y install python3 
+COPY loop-float-python.py /root/source
+RUN chmod 777 /root/source/*.py
+
+## go:
+##   version go1.13.8 linux/amd64
+RUN apt-get -y install golang
 COPY loop-int-go.go /root/source
 COPY loop-float-go.go /root/source
 RUN chmod 777 /root/source/*.go
 
-## perl
+## ruby:
+##  2.7.0p0 (2019-12-25 revision 647ee6f091) [x86_64-linux-gnu]
+RUN apt-get -y install ruby2.7
+COPY loop-float-ruby.rb /root/source
+RUN chmod 777 /root/source/*.rb
+
+## perl:
+##   This is perl 5, version 30, subversion 0 (v5.30.0) built for x86_64-linux-gnu-thread-multi
 COPY loop-float-perl.pl /root/source
 RUN chmod 777 /root/source/*.pl
 
-## python
-COPY loop-float-python.py /root/source
-RUN chmod 777 /root/source/*.py
+## nodejs:
+##  v10.19.0
+RUN apt-get -y install nodejs
 
-## ruby
-COPY loop-float-ruby.rb /root/source
-RUN chmod 777 /root/source/*.rb
+## csharp:
+##   Mono JIT compiler version 6.8.0.105 (Debian 6.8.0.105+dfsg-2 Wed Feb 26 23:23:50 UTC 2020)
+RUN apt-get -y install mono-devel
 
