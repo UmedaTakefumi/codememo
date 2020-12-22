@@ -24,17 +24,21 @@ RUN apt-get -y install ruby2.7
 
 WORKDIR /root/source
 
-COPY int-loop-go.go /root/source
+## go
+COPY loop-int-go.go /root/source
 COPY loop-float-go.go /root/source
+
+## perl
 COPY loop-float-perl.pl /root/source
+
+## python
 COPY loop-float-python.py /root/source
+
+## ruby
 COPY loop-float-ruby.rb /root/source
 
 RUN chmod 777 /root/source/*.py
 RUN chmod 777 /root/source/*.go
 RUN chmod 777 /root/source/*.rb
 RUN chmod 777 /root/source/*.pl
-
-
-
 
