@@ -20,6 +20,7 @@ WORKDIR /root/source
 ##   3.9.0 (default, Dec  6 2020, 18:02:34) 
 RUN apt-get -y install python3 
 COPY loop_float_python.py /root/source
+COPY test_loop_float_python.py /root/source
 RUN chmod 777 /root/source/*.py
 
 ## go:
