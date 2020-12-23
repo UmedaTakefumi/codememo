@@ -6,23 +6,27 @@ FROM centos:7
 
 RUN yum -y update
 RUN yum -y groupinstall "Development Tools"
+RUN yum -y install zlib-devel bzip2-devel readline-devel \
+		   sqlite-devel openssl-devel
 
 RUN groupadd -g 10000 developer
 RUN adduser -g 10000 -d /home/developer developer
 USER developer
-
-WORKDIR /home/developer/wsgi-sample
-COPY index.py /home/developer/wsgi-sample
+ENV HOME /home/developer
 
 ENV PYENV_ROOT $HOME/.pyenv
 ENV PATH $PYENV_ROOT/bin:$PATH
 RUN curl https://bootstrap.pypa.io/get-pip.py | python 
 RUN git clone https://github.com/pyenv/pyenv.git ~/.pyenv
-RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
-RUN  echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
-RUN echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
-RUN echo 'echo "a"' >> ~/.bash_profile
+RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
+RUN  echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc
+RUN echo 'echo "a"' >> ~/.bashrc
+RUN pyenv install 3.9.1
 
+WORKDIR /home/developer/wsgi-sample
+COPY index.py /home/developer/wsgi-sample
+RUN pyenv local 3.9.1
 
 
 
