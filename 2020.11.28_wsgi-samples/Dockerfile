@@ -13,3 +13,16 @@ USER developer
 
 WORKDIR /home/developer/wsgi-sample
 COPY index.py /home/developer/wsgi-sample
+
+ENV PYENV_ROOT $HOME/.pyenv
+ENV PATH $PYENV_ROOT/bin:$PATH
+RUN curl https://bootstrap.pypa.io/get-pip.py | python 
+RUN git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+RUN  echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+RUN echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+RUN echo 'echo "a"' >> ~/.bash_profile
+
+
+
+
