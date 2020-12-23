@@ -5,9 +5,11 @@
 FROM centos:7
 
 RUN yum -y update
+RUN yum -y install vim-enhanced git which
 RUN yum -y groupinstall "Development Tools"
 RUN yum -y install zlib-devel bzip2-devel readline-devel \
 		   sqlite-devel openssl-devel
+RUN yum -y install libffi-devel libffi pcre2-devel
 
 RUN groupadd -g 10000 developer
 RUN adduser -g 10000 -d /home/developer developer
@@ -27,6 +29,6 @@ RUN pyenv install 3.9.1
 WORKDIR /home/developer/wsgi-sample
 COPY index.py /home/developer/wsgi-sample
 RUN pyenv local 3.9.1
-
+RUN pip install uwsgi
 
 
