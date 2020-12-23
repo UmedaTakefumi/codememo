@@ -1,6 +1,6 @@
 # uWSGI sample script 
 
-## 
+## source
 
 ```
 def application(env, start_response):
