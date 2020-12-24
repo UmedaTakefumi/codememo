@@ -5,7 +5,7 @@
 """
 
 import unittest
-from loop_float_python import loop_count_add
+from loop_float_python import * 
 
 class Testloop_count_add_From1_To100(unittest.TestCase):
     """
@@ -70,7 +70,8 @@ class Testloop_count_add_From0_01_To1(unittest.TestCase):
                      0.81, 0.82, 0.83, 0.84, 0.85, 0.86, 0.87, 0.88, 0.89, 0.9,
                      0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1 ]
 
-        actual = loop_count_add(value1, value2, value3, value4)
+        #actual = loop_count_add(value1, value2, value3, value4)
+        actual = loop_count_add_decimal(value1, value2, value3, value4)
         self.assertEqual(expected, actual)
 
 if __name__ == "__main__":
