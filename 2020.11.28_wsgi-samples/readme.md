@@ -1,5 +1,10 @@
 # uWSGI sample script 
 
+## sake
+
+* wsgiのアプリケーションサーバーアプリのuwsgiを使い簡単なサンプルコードを動作させる。
+* uwsgi以外にgunicornというのがあるらしいがまたの機会にする。
+
 ## source
 
 ```
