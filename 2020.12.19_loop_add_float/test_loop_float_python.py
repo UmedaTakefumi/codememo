@@ -37,13 +37,11 @@ class Testloop_count_add_From0_01_To1(unittest.TestCase):
     """
     """
 
-    def test_loop_count_add(self):
+    def test_loop_count_add_decimal(self):
         """
         """
         value1 = 1
         value2 = 100
-        #value3 = 1
-        #value4 = 1
         value3 = 0.01
         value4 = 0.01
 
@@ -58,7 +56,7 @@ class Testloop_count_add_From0_01_To1(unittest.TestCase):
                      81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 
                      91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ]
 
-        # GoogleSpreadsheet
+        ## GoogleSpreadsheet で作成... テストデータ作るのめんどい...
         expected = [ 0.01, 0.02, 0.03, 0.04, 0.05, 0.06, 0.07, 0.08, 0.09, 0.1,
                      0.11, 0.12, 0.13, 0.14, 0.15, 0.16, 0.17, 0.18, 0.19, 0.2,
                      0.21, 0.22, 0.23, 0.24, 0.25, 0.26, 0.27, 0.28, 0.29, 0.3,
@@ -70,7 +68,6 @@ class Testloop_count_add_From0_01_To1(unittest.TestCase):
                      0.81, 0.82, 0.83, 0.84, 0.85, 0.86, 0.87, 0.88, 0.89, 0.9,
                      0.91, 0.92, 0.93, 0.94, 0.95, 0.96, 0.97, 0.98, 0.99, 1 ]
 
-        #actual = loop_count_add(value1, value2, value3, value4)
         actual = loop_count_add_decimal(value1, value2, value3, value4)
         self.assertEqual(expected, actual)
 
