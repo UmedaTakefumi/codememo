@@ -41,8 +41,9 @@ def loop_count_add_math(counter_start, counter_end, a, b):
     
     while counter_start <= counter_end:
         #print(a)
-        list.append(a)
-        a = math.floor(a + b)
+        list.append(float(a))
+        print(b)
+        a = math.fsum([a,b])
 
         counter_start+=1
 
