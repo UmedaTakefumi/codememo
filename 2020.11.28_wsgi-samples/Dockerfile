@@ -21,15 +21,15 @@ ENV PATH $PYENV_ROOT/bin:$PATH
 RUN curl https://bootstrap.pypa.io/get-pip.py | python 
 RUN git clone https://github.com/pyenv/pyenv.git ~/.pyenv
 RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
-RUN  echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
+RUN echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc
-RUN echo 'echo "a"' >> ~/.bashrc
 RUN pyenv install 3.9.1
 
 WORKDIR /home/developer/wsgi-sample
 COPY index.py /home/developer/wsgi-sample
 RUN pyenv local 3.9.1
 RUN $HOME/.pyenv/shims/pip install uwsgi
+RUN $HOME/.pyenv/shims/pip install pytest
 
 CMD ["/home/developer/.pyenv/shims/uwsgi", "--workers", "2", "--http", ":4649", "--wsgi-file", "/home/developer/wsgi-sample/index.py"]
 
