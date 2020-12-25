@@ -4,6 +4,7 @@
 
 * wsgiのアプリケーションサーバーアプリのuwsgiを使い簡単なサンプルコードを動作させる。
 * uwsgi以外にgunicornというのがあるらしいがまたの機会にする。
+* unittestの作成。
 
 ## source
 
