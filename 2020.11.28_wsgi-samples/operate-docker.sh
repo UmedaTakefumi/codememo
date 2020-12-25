@@ -21,11 +21,11 @@ function usage_exit() {
 }
 
 if [ "$1" = "build"  ]; then
-  build
+  __build
 elif [ "$1" = "login" ]; then
-  login
+  __login
 elif [ "$1" = "root_login" ]; then
-  root_login
+  __root_login
 elif [ "$1" = "" ]; then
   usage_exit
 else
