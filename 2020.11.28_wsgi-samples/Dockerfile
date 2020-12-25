@@ -1,7 +1,7 @@
 # Dockerfile / 2020.12.19_loop_add_float
 ## usage:
-##   docker build -t  ss-2020.11.28_wsgi-samples .
-##   docker run   -it ss-2020.11.28_wsgi-samples /bin/bash
+##   docker build -t  2020.11.28_wsgi-samples .
+##   docker run   -it 2020.11.28_wsgi-samples /bin/bash
 FROM centos:7
 
 RUN yum -y update
@@ -12,7 +12,7 @@ RUN yum -y install zlib-devel bzip2-devel readline-devel \
 RUN yum -y install libffi-devel libffi pcre2-devel
 
 RUN groupadd -g 10000 developer
-RUN adduser -g 10000 -d /home/developer developer
+RUN adduser  -g 10000 -d /home/developer developer
 USER developer
 ENV HOME /home/developer
 
