@@ -28,7 +28,6 @@ RUN pyenv install 3.9.1
 WORKDIR /home/developer/wsgi-sample
 RUN pyenv local 3.9.1
 RUN $HOME/.pyenv/shims/pip install uwsgi
-RUN $HOME/.pyenv/shims/pip install pytest
 
 COPY index.py /home/developer/wsgi-sample
 COPY test_index.py /home/developer/wsgi-sample
