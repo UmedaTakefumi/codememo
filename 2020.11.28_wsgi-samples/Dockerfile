@@ -1,4 +1,4 @@
-# Dockerfile / 2020.12.19_loop_add_float
+# Dockerfile / 2020.11.28_wsgi-samples 
 ## usage:
 ##   docker build -t  2020.11.28_wsgi-samples .
 ##   docker run   -it 2020.11.28_wsgi-samples /bin/bash
