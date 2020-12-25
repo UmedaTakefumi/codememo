@@ -11,7 +11,9 @@ function __login () {
 }
 
 function __root_login () {
-  docker exec -it --user root $DOCKER_TAG /bin/bash
+
+  DOCKER_CONTAINER_ID=$(docker ps | grep $DOCKER_TAG | awk {'print $1'})
+  docker exec -it --user root $DOCKER_CONTAINER_ID /bin/bash
 }
 
 function usage_exit() {
