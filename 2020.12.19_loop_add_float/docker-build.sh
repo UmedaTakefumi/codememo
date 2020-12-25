@@ -14,7 +14,7 @@ function root_login () {
   docker exec -it --user root $DOCKER_TAG /bin/bash
 }
 
-if	[ $1 = "build"  ]; then
+if [ $1 = "build"  ]; then
   build
 elif [ $1 = "login" ]; then
   login
