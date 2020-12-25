@@ -1,24 +1,34 @@
 #!/bin/bash
 
-DOCKER_TAG="ss-$(pwd | awk -F/ '{ print $NF }')"
+DOCKER_TAG="$(pwd | awk -F/ '{ print $NF }')"
 
-function build () {
+function __build () {
   docker build -t $DOCKER_TAG .
 }
 
-function login () {
+function __login () {
   docker run -it $DOCKER_TAG /bin/bash
 }
 
-function root_login () {
+function __root_login () {
   docker exec -it --user root $DOCKER_TAG /bin/bash
 }
 
-if [ $1 = "build"  ]; then
+function usage_exit() {
+  echo -e "Usage: $0 \n" 1>&2
+  declare -F | awk '{ print " " $3 }' | grep "__"
+  echo -e "\n"
+}
+
+if [ "$1" = "build"  ]; then
   build
-elif [ $1 = "login" ]; then
+elif [ "$1" = "login" ]; then
   login
-elif [ $1 = "root_login" ]; then
-  root_login	
+elif [ "$1" = "root_login" ]; then
+  root_login
+elif [ "$1" = "" ]; then
+  usage_exit
+else
+  usage_exit
 fi
 
