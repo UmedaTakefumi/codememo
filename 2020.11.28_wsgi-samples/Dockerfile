@@ -26,10 +26,12 @@ RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 RUN pyenv install 3.9.1
 
 WORKDIR /home/developer/wsgi-sample
-COPY index.py /home/developer/wsgi-sample
 RUN pyenv local 3.9.1
 RUN $HOME/.pyenv/shims/pip install uwsgi
 RUN $HOME/.pyenv/shims/pip install pytest
+
+COPY index.py /home/developer/wsgi-sample
+COPY test_index.py /home/developer/wsgi-sample
 
 CMD ["/home/developer/.pyenv/shims/uwsgi", "--workers", "2", "--http", ":4649", "--wsgi-file", "/home/developer/wsgi-sample/index.py"]
 
