@@ -35,6 +35,10 @@ docker run -it -p 4649:4649 2020.11.28_wsgi-samples
 curl -v http://localhost:4649
 ```
 
+```
+./test_index.py -v
+```
+
 ## 参考にした情報
 
 * https://uwsgi-docs.readthedocs.io/en/latest/WSGIquickstart.html
