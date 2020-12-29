@@ -36,5 +36,6 @@ RUN $HOME/.pyenv/shims/pipenv install --python 3.9.1
 RUN $HOME/.pyenv/shims/pipenv install flask uwsgi 
 
 #COPY Pipfile.lock /home/developer/flask-practice01
+CMD ["/home/developer/.pyenv/shims/pipenv", "run", "start"]
 
 EXPOSE 4649 
