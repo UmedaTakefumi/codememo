@@ -24,8 +24,17 @@ RUN echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 RUN echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 RUN pyenv install 3.9.1
-
-WORKDIR /home/developer/wsgi-sample
+WORKDIR /home/developer
 RUN pyenv local 3.9.1
+
+RUN $HOME/.pyenv/shims/pip install pipenv
+RUN $HOME/.pyenv/shims/pipenv install --python 3.9.1
+RUN $HOME/.pyenv/shims/pipenv install flask uwsgi 
+
+WORKDIR /home/developer/flask-practice01
+COPY hello.py /home/developer/flask-practice01
+
+#COPY Pipfile /home/developer/flask-practice01
+#COPY Pipfile.lock /home/developer/flask-practice01
 
 EXPOSE 4649 
