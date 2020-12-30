@@ -57,7 +57,6 @@ cat requirements.txt | \
   xargs -I{} pip download -d requirements --no-binary :all: {}
 ```
 
-
 ## Flask
 
 * デコレーターを利用し、ルーティングを作成
@@ -71,11 +70,14 @@ git clone https://github.com/UmedaTakefumi/stock_scripts.git
 ```
 cd stock_scripts/2020.11.29_flask-practice01
 docker build -t 2020.11.29_flask-practice01 .
+```
+
+```
 docker run -it -p 4649:4649 2020.11.29_flask-practice01
 ```
 
 ```
-./test_hello.py
+./test_hello.py -v
 ```
 
 ## 参考にした情報
