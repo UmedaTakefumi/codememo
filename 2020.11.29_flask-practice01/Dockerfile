@@ -2,6 +2,7 @@
 ## usage:
 ##   docker build -t  2020.11.29_flask-practice01 .
 ##   docker run   -it 2020.11.29_flask-practice01 /bin/bash
+##   docker run -it -p 4649:4649 2020.11.29_flask-practice01
 FROM centos:7
 
 RUN yum -y update
