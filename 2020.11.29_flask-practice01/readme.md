@@ -40,6 +40,13 @@ pipenv run start
 pipenv shell
 ```
 
+pip freezeのようなことをしたいとき
+
+```
+pipenv lock --requirements > requiments.txt
+```
+
+
 
 
 ## 参考にした情報
