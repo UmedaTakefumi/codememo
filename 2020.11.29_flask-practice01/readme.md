@@ -57,9 +57,9 @@ git clone https://github.com/UmedaTakefumi/stock_scripts.git
 ```
 
 ```
-cd stock_scripts/2020.11.29_flask-practice02
-docker build -t 2020.11.29_flask-practice02 .
-docker run -it -p 4649:4649 2020.11.29_flask-practice02
+cd stock_scripts/2020.11.29_flask-practice01
+docker build -t 2020.11.29_flask-practice01 .
+docker run -it -p 4649:4649 2020.11.29_flask-practice01
 ```
 
 ```
