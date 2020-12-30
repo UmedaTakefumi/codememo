@@ -28,6 +28,8 @@ git clone https://github.com/UmedaTakefumi/stock_scripts.git
 ```
 cd stock_scripts/2020.11.28_wsgi-samples
 docker build -t 2020.11.28_wsgi-samples .
+```
+```
 docker run -it -p 4649:4649 2020.11.28_wsgi-samples
 ```
 
