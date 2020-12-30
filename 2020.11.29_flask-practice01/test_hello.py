@@ -5,7 +5,6 @@
 """
 
 import unittest
-from index import *
 import urllib.request
 
 class TestHttpAccessFlask(unittest.TestCase):
@@ -14,7 +13,7 @@ class TestHttpAccessFlask(unittest.TestCase):
     def test_http_access_flask_hello(self):
         
         url = 'http://localhost:4649'
-        expected = b"Hello World\n"
+        expected = b"Hello, World"
 
         #ref: https://qiita.com/hoto17296/items/8fcf55cc6cd823a18217
 
