@@ -2,6 +2,7 @@
 ## usage:
 ##   docker build -t  2020.11.28_wsgi-samples .
 ##   docker run   -it 2020.11.28_wsgi-samples /bin/bash
+##   docker run -it -p 4649:4649 2020.11.28_wsgi-samples
 FROM centos:7
 
 RUN yum -y update
