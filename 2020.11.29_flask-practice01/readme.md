@@ -46,8 +46,25 @@ pip freezeのようなことをしたいとき
 pipenv lock --requirements > requiments.txt
 ```
 
+## Flask
 
+* デコレーターを利用し、ルーティングを作成
 
+## usage
+
+```
+git clone https://github.com/UmedaTakefumi/stock_scripts.git
+```
+
+```
+cd stock_scripts/2020.11.29_flask-practice02
+docker build -t 2020.11.29_flask-practice02 .
+docker run -it -p 4649:4649 2020.11.29_flask-practice02
+```
+
+```
+./test_hello.py
+```
 
 ## 参考にした情報
 
