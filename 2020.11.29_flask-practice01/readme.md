@@ -46,6 +46,18 @@ pip freezeのようなことをしたいとき
 pipenv lock --requirements > requiments.txt
 ```
 
+## python-modulesのダウンロード
+
+```
+cat requirements.txt | \
+  grep -v 'https://pypi.org/simple' | \
+  sed '/^#/d' |    \
+  sed '/^$/d' |    \
+  sed 's/\;.*//' | \
+  xargs -I{} pip download -d requirements --no-binary :all: {}
+```
+
+
 ## Flask
 
 * デコレーターを利用し、ルーティングを作成
