@@ -15,5 +15,5 @@ RUN apt-get -y update
 RUN apt-get -y install vim git
 
 WORKDIR /root/source
-
+COPY mt_rand.php /root/source
 
