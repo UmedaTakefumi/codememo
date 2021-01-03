@@ -1,9 +1,9 @@
 <?php
 
-$count_value_one=0;
+function RandScatterPlot()
+{
 
-echo "乱数生成アルゴリズムと確率の確認\n";
-
+  $count_value_one=0;
 
   for ($loop_count=1; $loop_count<=100; $loop_count++) {
 
@@ -14,6 +14,8 @@ echo "乱数生成アルゴリズムと確率の確認\n";
     }
   }  
 
-echo "1が生成された回数:$count_value_one\n"
+}
+
+RandScatterPlot();
 
 ?>
